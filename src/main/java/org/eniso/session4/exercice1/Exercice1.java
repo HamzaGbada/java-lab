@@ -10,7 +10,6 @@ package org.eniso.session4.exercice1;
  */
 public class Exercice1 {
         public static void main(String[] args) {
-        // Exemple de conversions explicites des références
         BankAccount account = new SavingsAccount(201, 3.5);
         SavingsAccount savingsAccount = (SavingsAccount) account;
         System.out.println("Conversion explicite réussie : " + (savingsAccount != null));
@@ -19,7 +18,6 @@ public class Exercice1 {
         CheckingAccount checkingAccount = (CheckingAccount) anotherAccount;
         System.out.println("Conversion explicite réussie : " + (checkingAccount != null));
 
-        // Test de fonctionnalité existante
         SavingsAccount savingsAccount1 = new SavingsAccount(101, 5.0);
         savingsAccount1.deposit(1000.0);
         savingsAccount1.withdraw(200.0);

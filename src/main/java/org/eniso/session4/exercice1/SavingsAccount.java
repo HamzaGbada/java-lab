@@ -32,7 +32,6 @@ public class SavingsAccount extends BankAccount{
             this.balance -= amount;
         } else {
             System.out.println("Insufficient funds!");
-            // Implement penalty for excessive withdrawals
         }
     }
 }

@@ -34,7 +34,6 @@ class User {
     }
 
     public boolean authenticate() {
-        // Add authentication logic
         return true;
     }
 }

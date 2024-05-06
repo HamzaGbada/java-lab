@@ -31,7 +31,6 @@ public class DatabaseManager {
             connection = DriverManager.getConnection(URL, USER, PASSWORD);
         } catch (SQLException e) {
             e.printStackTrace();
-            // Handle connection errors
         }
     }
 
@@ -43,12 +42,10 @@ public class DatabaseManager {
         return instance;
     }
 
-    // Method to get the database connection
     public Connection getConnection() {
         return connection;
     }
 
-    // Method to close the database connection
     public void closeConnection() {
         try {
             if (connection != null && !connection.isClosed()) {
@@ -56,11 +53,9 @@ public class DatabaseManager {
             }
         } catch (SQLException e) {
             e.printStackTrace();
-            // Handle closure errors
         }
     }
     
-    // Method to test database connectivity
     public String testConnectivityMessage() {
         try {
             if (connection != null && !connection.isClosed()) {

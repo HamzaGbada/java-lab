@@ -108,7 +108,6 @@ public class WeightedGraph extends Graph{
             }
         }
 
-        // Print the shortest distances from the source node to all other nodes
         System.out.println("Shortest distances from node " + source + ":");
         for (int i = 0; i < n; i++) {
             System.out.println("Node " + i + ": " + distances[i]);

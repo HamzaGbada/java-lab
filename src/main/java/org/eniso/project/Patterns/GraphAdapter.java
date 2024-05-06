@@ -14,13 +14,11 @@ public class GraphAdapter {
     private List<List<Integer>> adjacencyList;
     private int[][] adjacencyMatrix;
 
-    // Constructor
     public GraphAdapter(List<List<Integer>> adjacencyList) {
         this.adjacencyList = adjacencyList;
         convertToAdjacencyMatrix();
     }
 
-    // Method to convert adjacency list to adjacency matrix
     private void convertToAdjacencyMatrix() {
         int n = adjacencyList.size();
         adjacencyMatrix = new int[n][n];
@@ -33,7 +31,6 @@ public class GraphAdapter {
         }
     }
 
-    // Method to convert adjacency matrix to adjacency list
     public void convertToAdjacencyList() {
         int n = adjacencyMatrix.length;
         adjacencyList = new ArrayList<>();
@@ -49,23 +46,19 @@ public class GraphAdapter {
         }
     }
 
-    // Getter for adjacency list
     public List<List<Integer>> getAdjacencyList() {
         return adjacencyList;
     }
 
-    // Getter for adjacency matrix
     public int[][] getAdjacencyMatrix() {
         return adjacencyMatrix;
     }
 
-    // Method to update adjacency list
     public void updateAdjacencyList(List<List<Integer>> newList) {
         this.adjacencyList = newList;
         convertToAdjacencyMatrix();
     }
 
-    // Method to update adjacency matrix
     public void updateAdjacencyMatrix(int[][] newMatrix) {
         this.adjacencyMatrix = newMatrix;
         convertToAdjacencyList();

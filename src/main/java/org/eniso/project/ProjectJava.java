@@ -14,7 +14,6 @@ public class ProjectJava {
     public static void main(String[] args) {
         DatabaseManager databaseConnection = DatabaseManager.getInstance();
 
-        // Test database connectivity and print the result
         String connectivityMessage = databaseConnection.testConnectivityMessage();
         System.out.println("Database Connectivity Status: " + connectivityMessage);
     }
